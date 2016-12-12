@@ -1,0 +1,2 @@
+<div ng-repeat="country in $ctrl.list" ng-class="{'active-country':$index == $ctrl.enterCity.activeCountry}"
+     ng-click="$ctrl.changeActive($index)">{{'country'+country.text | language}}</div>

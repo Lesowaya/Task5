@@ -1,0 +1,37 @@
+(function () {
+  'use strict';
+  angular.module('nestoria').constant('en', {
+    'countryBrazil': 'Brazil',
+    'countryFrance': 'France',
+    'countryGermany': 'Germany',
+    'countryIndia': 'India',
+    'countryMexico': 'Mexico',
+    'countryPeru': 'Peru',
+    'countrySpain': 'Spain',
+    'countryUnitedKingdom': 'United Kingdom',
+    'buy': 'Buy',
+    'rent': 'Rent',
+    'share': 'Share',
+    'type': 'Type',
+    'priceMin': 'Price min:',
+    'priceMax': 'Price max:',
+    'roomMin': 'Rooms min:',
+    'roomMax': 'Rooms max:',
+    'bedsMin': 'Bedrooms min:',
+    'bedsMax': 'Bedrooms max:',
+    'bathMin': 'Bathroom min:',
+    'bathMax': 'Bathroom max:',
+    'hasImg': 'Only with photo:',
+    'sortResultsBy': 'Sort results by',
+    'relevancy': 'Relevancy',
+    'bedsUp': 'Bedroom lowhigh',
+    'bedsDown': 'Bedroom highlow',
+    'priceUp': 'Price lowhigh',
+    'priceDown': 'Price highlow',
+    'newest': 'Newest',
+    'oldest': 'Oldest',
+    'random': 'Random',
+    'EnterTheCity:' : 'Enter the city:',
+    'noMatches:':'Sorry, no matches were found for your request.'
+  });
+})();

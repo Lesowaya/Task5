@@ -1,0 +1,61 @@
+<form class="enter-city center">
+  <label>{{'EnterTheCity:' | language}}<br>
+    <input type="text" placeholder="{{$ctrl.enterCity.countries[$ctrl.enterCity.activeCountry].capital}}"
+           id="city-variants" autocomplete="off" list="cities-list"
+           ng-model="$ctrl.enterCity.parametrsToSearch.params.place_name"
+           ng-keyup="$ctrl.enterCity.findCities($event)">
+
+    <i class="fa fa-1x fa-search" aria-hidden="true"
+       ng-click="$ctrl.enterCity.findFlats($ctrl.enterCity.countries[$ctrl.enterCity.activeCountry].api, $ctrl.enterCity.onSuccess)"></i>
+  </label>
+  <i class="fa fa-star i-favorite" aria-hidden="true" ng-click ="$ctrl.enterCity.favorities.load()"></i>
+</form>
+
+<datalist id="cities-list">
+  <option ng-repeat ="option in $ctrl.enterCity.citiesList"
+          value="{{option.structured_formatting.main_text}}"></option>
+</datalist>
+<div class="results center">
+  <div>
+    <div class="item sorry-item" ng-if="$ctrl.enterCity.resultsNumber == 0">{{'noMatches:' | language}}</div>
+    <div ng-repeat="item in $ctrl.enterCity.flats">
+      <a href="/#!/change" class="link-modal" ng-click="$ctrl.enterCity.saveAsActive(item)">
+        <div class="item">
+          <h1>{{item.title_short}}</h1>
+          <img ng-src="{{item.img_url}}">
+          <div>
+            <p>Rooms: {{item.room_number}}</p>
+            <p>Price:{{item.price_formatted}}</p>
+            <p>Type: {{item.property_type}} </p>
+          </div>
+          <i class="fa fa-2x fa-star" ng-init="check = $ctrl.favorites.checkContains(item)"
+             ng-class="{'i-color': check}"
+             aria-hidden="true" ng-click="$ctrl.favorites.changeFavoriteStatus(item)"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <ul id="pagination-demo" class="pagination-sm"></ul>
+</div>
+<div class="bg-load">
+  <div class="load">
+    <div class="wBall" id="wBall_1">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_2">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_3">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_4">
+      <div class="wInnerBall"></div>
+    </div>
+    <div class="wBall" id="wBall_5">
+      <div class="wInnerBall"></div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

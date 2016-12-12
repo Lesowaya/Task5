@@ -1,0 +1,43 @@
+<div class="center change">
+  <br>
+  <h1 class="modal-h1">{{$ctrl.activeFlat.title}}</h1>
+  <br>
+  <p>Rooms: {{$ctrl.activeFlat.room_number}}
+    <input type="number" min="0" max="100" placeholder="{{$ctrl.activeFlat.room_number}}"
+           ng-model="$ctrl.activeFlat.room_number">
+  </p>
+  <p>Type: {{$ctrl.activeFlat.listing_type}}
+    <input type="text" name="type" placeholder="{{$ctrl.activeFlat.listing_type}}"
+           ng-model="$ctrl.activeFlat.listing_type">
+  </p>
+  <p>Price: {{$ctrl.activeFlat.price_formatted}}
+    <input type="text" name="price" placeholder="{{$ctrl.activeFlat.price_formatted}}"
+           ng-model="$ctrl.activeFlat.price_formatted">
+  </p>
+  <p>Price type: {{$ctrl.activeFlat.price_type}}
+    <input type="text" name="priceType" placeholder="{{$ctrl.activeFlat.price_type}}"
+           ng-model="$ctrl.activeFlat.price_type">
+  </p>
+  <p>Bedrooms: {{$ctrl.activeFlat.bedroom_number}}
+    <input type="number" name="beds" min="0" max="100" placeholder="{{$ctrl.activeFlat.bedroom_number}}"
+           ng-model="$ctrl.activeFlat.bedroom_number">
+  </p>
+  <p>Bathrooms: {{$ctrl.activeFlat.bathroom_number}}
+    <input type="number" name="bath" min="0" max="100" placeholder="{{$ctrl.activeFlat.bathroom_number}}"
+           ng-model="$ctrl.activeFlat.bathroom_number">
+  </p>
+  <p>Car spaces: {{$ctrl.activeFlat.car_spaces}}
+    <input type="number" name="cars" min="0" max="100" placeholder="{{$ctrl.activeFlat.car_spaces}}"
+           ng-model="$ctrl.activeFlat.car_spaces">
+  </p>
+  <p>Update: {{$ctrl.activeFlat.updated_in_days_formatted}}
+    <input type="text" name="update" placeholder="{{$ctrl.activeFlat.updated_in_days_formatted}}"
+           ng-model="$ctrl.activeFlat.updated_in_days_formatted">
+  </p>
+  <div class="set-change-size">
+    <a href="/#!/"><i class="fa fa-3x fa-check"
+                      ng-click="$ctrl.favorites.changeFavoriteStatus($ctrl.activeFlat)" aria-hidden="true"></i></a>
+    <a href="/#!/"><i class="fa fa-3x fa-chevron-left" aria-hidden="true"></i></a>
+  </div>
+</div>
+

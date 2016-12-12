@@ -1,0 +1,44 @@
+<div  class="parameters-with-i" ng-class="{'show-parameters':$ctrl.isOpened}">
+<div class="parameters">
+  <form class="params">{{'type' | language}}
+    <label><input type="radio" name="type" value="buy"  ng-model="$ctrl.searchFilters.data.type" checked>{{'buy' | language}}<br>
+      <input type="radio" name="type" value="rent"  ng-model="$ctrl.searchFilters.data.type">{{'rent' | language}}<br>
+      <input type="radio" name="type" value="share"  ng-model="$ctrl.searchFilters.data.type">{{'share' | language}}<br>
+    </label>
+    <hr>
+    <label>{{'priceMin' | language}}
+      <input type="number" name="price_min" placeholder="0" min="0" ng-model="$ctrl.searchFilters.data.priceMin">
+    </label>
+    <label>{{'priceMax' | language}}
+      <input type="number" name="price_max" max="99999" placeholder="99999" ng-model="$ctrl.searchFilters.data.priceMax">
+    </label>
+    <hr>
+    <label>{{'roomMin' | language}}
+      <input type="number" name="room_min" placeholder="0" ng-model="$ctrl.searchFilters.data.roomMin">
+    </label>
+    <label>{{'roomMax' | language}}
+      <input type="number" name="room_max" placeholder="99999" ng-model="$ctrl.searchFilters.data.roomMax">
+    </label>
+    <hr>
+    <label>{{'bedsMin' | language}}
+      <input type="number" name="bedroom_min" placeholder="0" ng-model="$ctrl.searchFilters.data.bedsMin">
+    </label>
+    <label>{{'bedsMax' | language}}
+      <input type="number" name="bedroom_max" placeholder="99999" ng-model="$ctrl.searchFilters.data.bedsMax">
+    </label>
+    <hr>
+    <label>{{'bathMin' | language}}
+      <input type="number" name="bathroom_min" placeholder="0" ng-model="$ctrl.searchFilters.data.bathMin">
+    </label>
+    <label>{{'bathMax' | language}}
+      <input type="number" name="bathroom_max" placeholder="99999" ng-model="$ctrl.searchFilters.data.bathMax">
+    </label>
+    <hr>
+    <label>{{'hasImg' | language}}
+      <input type="radio" name="has_photo" ng-model="$ctrl.searchFilters.data.hasImg">
+    </label>
+  </form>
+</div>
+<i class="fa fa-3x arrow" ng-class="{'fa-chevron-left':$ctrl.isOpened, 'fa-chevron-right':!$ctrl.isOpened}"
+   aria-hidden="true" ng-click="$ctrl.isOpened = !$ctrl.isOpened"></i>
+</div>

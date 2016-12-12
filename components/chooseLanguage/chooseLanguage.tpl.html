@@ -1,0 +1,4 @@
+<ul class="choose-lang">
+  <li ng-repeat="lang in $ctrl.list" ng-class="{'active-lang':lang == $ctrl.language.getActive()}"
+      ng-click="$ctrl.language.setActive(lang)">{{lang}}</li>
+</ul>

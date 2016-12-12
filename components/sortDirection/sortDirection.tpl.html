@@ -1,0 +1,16 @@
+<div class="sort-with-i"  ng-class="{'show-sort':$ctrl.isOpened}">
+  <div class="sort-container">
+    <form class="sort">{{'sortResultsBy' | language}}
+      <label><input type="radio" name="sort" value="relevancy" checked>{{'relevancy' | language}}</label>
+      <label><input type="radio" name="sort" value="bedroom_lowhigh">{{'bedsUp' | language}}</label>
+      <label><input type="radio" name="sort" value="bedroom_highlow">{{'bedsDown' | language}}</label>
+      <label><input type="radio" name="sort" value="price_lowhigh">{{'priceUp' | language}}</label>
+      <label><input type="radio" name="sort" value="price_highlow">{{'priceDown' | language}}</label>
+      <label><input type="radio" name="sort" value="newest">{{'newest' | language}}</label>
+      <label><input type="radio" name="sort" value="oldest">{{'oldest' | language}}</label>
+      <label><input type="radio" name="sort" value="random">{{'random' | language}}</label>
+    </form>
+  </div>
+  <i class="fa fa-3x arrow" ng-class="{'fa-chevron-right':$ctrl.isOpened, 'fa-chevron-left':!$ctrl.isOpened}"
+     aria-hidden="true" ng-click="$ctrl.isOpened = !$ctrl.isOpened"></i>
+</div>
